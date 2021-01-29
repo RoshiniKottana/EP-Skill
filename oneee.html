@@ -1,0 +1,36 @@
+<html>
+<body>
+<head>Registration form</head>
+<link rel="stylesheet"
+type="text/css"
+href="one.css"
+/>
+<script>  
+function validateform(){  
+var name=document.myform.name.value;  
+var password=document.myform.password.value;
+var phoneNum=document.myform.phoneNum.value;
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+ }
+}  
+</script>  
+ 
+<form name="myform" method="post" action="javascriptpages" onsubmit="return validateform()" >  
+Name <input type="text" name="name"><br/>  
+Password <input type="password" name="password"><br/>
+Phone<input type="text" name="phoneNum"><br/>
+EmailID <input type="text" name="email"><br/>
+Gender <input type="radio" name="gender">Male <input type="radio" name="gender">Female<br/>
+Language <input type="checkbox"name="lang">English <input type="checkbox"name="lang">Telugu <input type="checkbox"name="lang">Hindi <input type="checkbox"name="lang">Tamil<br/>
+
+Address <textarea>    </textarea> <br/> 
+<input type="submit" value="register">  
+</form>  
+</body>
+</html>
